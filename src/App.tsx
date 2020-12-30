@@ -1,11 +1,16 @@
 import React from 'react';
 import './App.css';
+import Button from '@material-ui/core/Button';
+
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      hello
+      <Button variant="contained" color="primary">
+        Primary
+      </Button>
     </div>
+
   );
 }
 
