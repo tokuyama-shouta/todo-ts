@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import { createLogicalNot } from 'typescript';
 import './App.css';
 
 const name = "hello";
@@ -23,6 +24,30 @@ let nameObj: NAME = {first: "Yamada", last: "Taro"};
 const func1 = (x: number, y: number):number => {
   return x + y;
 }
+
+//Intersection Types
+
+type PROFILE = {
+  age: number;
+  city: string;
+}
+
+type LOGIN = {
+  username: string;
+  passwaord: string;
+}
+
+type USER = PROFILE & LOGIN;
+
+const userA: USER = {
+  age: 30,
+  city: "Tokyo",
+  username: "xxx",
+  passwaord: "yyy"
+}
+
+
+
 
 const App: React.FC = () => {
   
