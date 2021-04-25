@@ -46,8 +46,14 @@ const userA: USER = {
   passwaord: "yyy"
 }
 
+// Union Types
 
+let value: boolean | number;
+value = true;
+value = 12;
 
+let arrayUni: (number | string)[];
+arrayUni = [0,1,2,"hello"];
 
 const App: React.FC = () => {
   
