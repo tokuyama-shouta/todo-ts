@@ -88,7 +88,7 @@ const SPORTS = {
 let keySports: keyof typeof SPORTS;
 keySports = "soccer";
 
-// enum
+// enum!!!
 enum OS {
   Windows,
   Mac,
