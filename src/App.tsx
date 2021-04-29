@@ -114,11 +114,57 @@ const comp1 = "test";
 let comp2:string = comp1;
 
 let comp3: string = "test";
-let comp4: "test" = comp3;
+//let comp4: "test" = comp3;
 
 let funcComp1 = (x: number) => {};
 let funcComp2 = (x: string) => {};
 
+//Generics
+interface GEN <T>{
+  item: T;
+
+}
+const gen0: GEN<string> = {item: "hello"};
+//const gen1: GEN = {item: "hello"};
+const gen2: GEN<number> = {item: 12};
+
+interface GEN1<T = string> {
+  item: T;
+}
+const gen3: GEN1 = {item: "hello"};
+
+interface GEN2<T extends string | number>{
+  item: T;
+}
+const gen4: GEN2<number> = { item: 1};
+
+function funcGen<T>(props: T) {
+  return {item: props}
+}
+
+const gen6 = funcGen<string>("test");
+const gen7 = funcGen<string | null>("test");
+
+function funcGen1<T extends string | null>(props: T){
+  return {value:props};
+}
+
+const gen8 = funcGen1("hello");
+//const gen9 = funcGen1(123);
+
+interface Props {
+  price: number;
+}
+
+function funcGen3<T extends Props>(props: T){
+  return {value: props.price};
+}
+
+const gen10 = funcGen3({price: 10});
+
+const funcGen4 = <T extends Props>(props: T) => {
+  return {value: props.price}
+}
 
 const App: React.FC = () => {
   
