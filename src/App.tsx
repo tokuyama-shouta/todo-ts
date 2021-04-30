@@ -1,6 +1,9 @@
 import React,{useState} from 'react';
 import { createLogicalNot } from 'typescript';
 import './App.css';
+// import Data from "./data.json"
+
+//type USER = typeof Date;
 
 const name = "hello";
 
