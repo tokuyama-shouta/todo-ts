@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import { createLogicalNot } from 'typescript';
 import './App.css';
+import TestComponent from './TestComponent';
 // import Data from "./data.json"
 
 //type USER = typeof Date;
@@ -170,15 +171,13 @@ const funcGen4 = <T extends Props>(props: T) => {
 }
 
 const App: React.FC = () => {
-  
-
   return (
     <div className="App">
-      <header className="App-header"></header>
+      <header className="App-header">
+        <TestComponent text="hello from App"/>
+      </header>
     </div>
-    
-
   );
-}
+};
 
 export default App;
